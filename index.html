@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freitas Personalizados | Catálogo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">Freitas<span>Personalizados</span></a>
+            
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Buscar produtos...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="cart-icon" id="cartToggleBtn">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-badge" id="cartBadge">0</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="category-nav">
+        <ul id="categoryList">
+            </ul>
+    </nav>
+
+<div class="tags-container" id="tagsContainer"></div>
+    
+    <main class="main-content">
+        <div class="products-grid" id="productsGrid">
+            </div>
+    </main>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Seu Carrinho</h2>
+            <button class="close-cart" id="closeCartBtn"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="cart-items" id="cartItems">
+            </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <strong id="cartTotalValue">R$ 0,00</strong>
+            </div>
+            
+            <div class="checkout-form">
+                <input type="text" id="customerName" placeholder="Seu Nome Completo" required>
+                <input type="text" id="customerAddress" placeholder="Endereço de Entrega" required>
+                <select id="paymentMethod" required>
+                    <option value="" disabled selected>Forma de Pagamento</option>
+                    <option value="PIX">PIX</option>
+                    <option value="Cartão de Crédito">Cartão de Crédito (Consultar condições)</option>
+                    <option value="Dinheiro">Dinheiro</option>
+                </select>
+            </div>
+
+            <button class="checkout-btn" id="checkoutBtn">
+                <i class="fab fa-whatsapp"></i> Finalizar Pedido
+            </button>
+        </div>
+    </aside>
+
+    <a href="https://wa.me/5571993171870" target="_blank" class="floating-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <p>&copy; 2026 FreitasPersonalizados. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <div class="modal-overlay" id="productModal">
+    <div class="modal-content">
+        <button class="close-modal" onclick="closeModal()">&times;</button>
+        <div class="modal-body">
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="">
+            </div>
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <span id="modalCategory" class="product-category"></span>
+                <div id="modalPrice" class="product-price"></div>
+                <div id="modalDescription" class="modal-desc"></div>
+                <button id="modalAddToCart" class="add-to-cart-btn">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
